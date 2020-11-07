@@ -1,5 +1,20 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+    #badge{
+    position: fixed;
+    right: 22px;
+    top: 42px;
+     
+    }
+    #cart{
+      position: fixed;
+      right: 35px;
+      top: 49px;
+    }
+  </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +23,7 @@
     <link rel="stylesheet" href="prj.css">
     <body>
       <div class="container-storage">
-      <nav class="navbar navbar-inverse">
+      <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -20,31 +35,43 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">HOME</a></li>
-              <li><a href="1shops.html">SHOPS</a></li>
+              <li><a href="index.html">HOME</a></li>
+                <li  data-target="#shoptoggle" data-toggle="collapse" id="shopnavbar">SHOPS
+                  <div >
+                        <ul id="shoptoggle" class="collapse">
+                          <li><a href="louisVuitton.html"> Louis Vuiton</a></li>
+                          <li><a href="burberry.html"> Burberry</a></li>
+                          <li><a href="PT2000.html">PT2000</a></li>
+                          <li><a href="YAME.html">YAME</a></li>
+                          <li><a href="ROUTINE.html">ROUTINE</a></li>
+                        </ul>
+                    </div>
+                </li>
               <li><a href="2community.html">COMMUNITY</a></li>
               <li><a href="3signature.html">SIGNATURE</a></li>
               <li><a href="4aboutus.html">ABOUT US</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><span class="glyphicon glyphicon-list"></span> MENU</a></li>
-              <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> CART</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span>LOG-IN</a></li>
+              <li><a href="cart.html" style="margin-right:50px; top:5px"> CART</a><span class="glyphicon glyphicon-shopping-cart" id="cart"></span><span class="badge" id="badge"></span> </li>
             </ul>
           </div>
         </div>
       </nav>
+
           <br><br><br><br><br>
-          <h1>&nbsp;PT2000</h1>
-    
-        <div class="row" style="height:auto">
-            <div class="col-sm-6"> <img src="Image/product/capPT_.jpg" alt="" ></div>
-            <div class="col-sm-6" style="text-indent: 100px;" ><br><br><br>
+         
+ 
+        <div class="row" style="height:auto">   
+           <div class="col-sm-6"> <img src="Image/product/capPT_.jpg" alt="" ></div>
+            <div class="col-sm-6" style="text-indent: 100px;" ><br><br>
+                <div><h1 style="text-indent: 200px;">PT2000 </h1></div>
                 <div><h3><B>On 5 Panel Cap</B></h3></div>
                 <div>$100.00</div>
                     <hr style="width: 80%;">
-                <div> <m style="font-size: 20px; ">Composition </m>100% Oxford Chambray Cotton</div>
-                <div> <m style="font-size: 20px;"> Color </m>Grey oxide </div>
-
+                <div> <m style="font-size: 20px; ">Composition: 100% Oxford Chambray Cotton</m></div>
+                <div> <m style="font-size: 20px;"> Color: Grey oxide </m></div>
+                <div><m style="font-size: 20px;">Quantity: </m><input type="number" style="width:50px" min="0" max="99"></div>
                      <br>
                      <hr style="width: 80%;">
                 <div>Free Shipping and Returns </div>
@@ -77,8 +104,8 @@
             <div class="col-sm-6">
                 <ul> 
                     <li>590 CMT8, Phường 11, Quận 3, Tp.HCM</li>
-                    <li>Email:  GroupFashion@gmail.com</li>
-                    <li>Phone number: 0123456789</li>
+                   <li >Mail <span class="glyphicon glyphicon-envelope" ></span>: <a href="mailto:lanhpt5@fe.edu.vn">lanhpt5@fe.edu.vn </span></a><br> </li>
+                    <li>Phone number <span class="glyphicon glyphicon-phone"></span>: <a href="phoneto:090900099"> 090900099</a></li>
                 </ul>
             </div>
             <div class="col-sm-6">
@@ -130,34 +157,18 @@
             <br>
           </div>
       </div>
-      <div class="row" id="ft2">
-        <div class="col-sm-8" >
-          Made by Jay Kingston
-        </div>
-        <div class="col-sm-4">
-          All right reserved Man Fashion Collection, FPT.HCM2020
-        </div>
-      </div>
+      <div  id="ft2" style="text-align :center"> All right reserved Man Fashion Collection, FPT.HCM2020 </div>
       </footer>
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
-       $(document).ready(function(){
+       $(document).ready(function(){ 
            
            $("#add").on("click",function(){
-               $("#loadContent").load("cart.html",function(response,status,xhr){
-                   if(status=="success")
-                   {
-                       alert("Add to cart successfully");
-                   }
-                   else if(status=="error")
-                   {
-                       lert("Data is requested fail with "+ xhr.status + " " +shr.status);
-                   }
-               })
-           })
+              alert("Add to cart successfully");
+           });
        });              
 
         function counterSession(){
