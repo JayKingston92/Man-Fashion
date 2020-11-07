@@ -1,50 +1,86 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+    #badge{
+    position: fixed;
+    right: 22px;
+    top: 42px;
+     
+    }
+    #cart{
+      position: fixed;
+      right: 35px;
+      top: 49px;
+    }
+  </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="prj.css">
-<style>
-    .badge{
-        margin-top: -25px;
-        margin-left: -5px;
-    }
-</style>
-</head>
-<body>
-        <!-- Comiled and minified jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <!-- Comiled and minified JS  -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   
-        <nav class="navbar navbar-default " >
-            <ul class="nav navbar-nav " >
-                <li style="font-size: 30px; margin-right: 50px; "><a href="FS.html"><B>Louis Vuitton </B></a></li>
+    <body>
+      <div class="container-storage">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">HOME</a></li>
+                <li  data-target="#shoptoggle" data-toggle="collapse" id="shopnavbar">SHOPS
+                  <div >
+                        <ul id="shoptoggle" class="collapse">
+                          <li><a href="louisVuitton.html"> Louis Vuiton</a></li>
+                          <li><a href="burberry.html"> Burberry</a></li>
+                          <li><a href="PT2000.html">PT2000</a></li>
+                          <li><a href="YAME.html">YAME</a></li>
+                          <li><a href="ROUTINE.html">ROUTINE</a></li>
+                        </ul>
+                    </div>
+                </li>
+              <li><a href="2community.html">COMMUNITY</a></li>
+              <li><a href="3signature.html">SIGNATURE</a></li>
+              <li><a href="4aboutus.html">ABOUT US</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right" style="margin-right: 30px;">
-                <li><a href=""> <span class="glyphicon glyphicon-user"> Log-in</span></a> </li>
-                <li><a href="" > Cart <span class="glyphicon glyphicon-shopping-cart "><span class="badge" id="badge"></span></span></a></li>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span>LOG-IN</a></li>
+              <li><a href="cart.html" style="margin-right:50px; top:5px"> CART</a><span class="glyphicon glyphicon-shopping-cart" id="cart"></span><span class="badge" id="badge"></span> </li>
             </ul>
-        </nav>
+          </div>
+        </div>
+      </nav>
+
+          <br><br><br><br><br>
+         
     
         <div class="row" style="height:auto">
             <div class="col-sm-6"> <img src="Image/product/kinh_.png" alt="sungglassesLV" ></div>
-            <div class="col-sm-6" style="text-indent: 100px;" ><br><br><br>
+            <div class="col-sm-6" style="text-indent: 100px;" ><br><br>
+                 <div><h1 style="text-indent: 200px;">Louis vuiton  </h1></div>
                 <div><h3><B>LV WAIMEA SUNGLASSES</B></h3></div>
                 <div>$400.00</div>
                     <hr style="width: 80%;">
                 <div>  Black frame. Silver-color Monogram-patterned lenses </div>
-                <div> <m style="font-size: 20px;"> Size:</m> W</div>
+                <div> <m style="font-size: 20px;"> Size: W</m></div>
+                <div><m style="font-size: 20px;">Quantity: </m><input type="number" style="width:50px" min="0" max="99"></div>
                      <br>
                      <hr style="width: 80%;">
                 <div>Free Shipping and Returns </div>
                    
                     
                 <div><button style="margin-right: 10px;" class="btn btn-primary" data-toggle="collapse" data-target="#demo">More details</button><button class="btn btn-success" id="add" onclick="counterSession()">Add to cart</button></div>
-                     <div style="text-indent: 220px;"><strong id="loadContent"></strong></div>
-                     <div id="demo" class="collapse">    <h2> DELIVERY DETAILS</h2>
+                      <div style="text-indent: 220px;"><strong id="loadContent"></strong></div>
+                      <div id="demo" class="collapse">    <h2> DELIVERY DETAILS</h2>
                         <div style="text-indent: 130px; font-size: 80%;">
                         <h4>Free Standard Shipping</h4>
                             <p> Place your order today and receive it within 3-5 working days</p><br>
@@ -61,15 +97,15 @@
             </div>
         </div>
     
-         <hr>
+        <hr>
     <div class="container">
         <div class="row">
-        <div class="col-sm-8"> <h2>Man Fashion</h2>
+        <div class="col-sm-8"> <h2>Fashion Store</h2>
 
             <div class="col-sm-6">
                 <ul> 
                     <li>590 CMT8, Phường 11, Quận 3, Tp.HCM</li>
-                    <li >Mail <span class="glyphicon glyphicon-envelope" ></span>: <a href="mailto:lanhpt5@fe.edu.vn">lanhpt5@fe.edu.vn </span></a><br> </li>
+                   <li >Mail <span class="glyphicon glyphicon-envelope" ></span>: <a href="mailto:lanhpt5@fe.edu.vn">lanhpt5@fe.edu.vn </span></a><br> </li>
                     <li>Phone number <span class="glyphicon glyphicon-phone"></span>: <a href="phoneto:090900099"> 090900099</a></li>
                 </ul>
             </div>
@@ -122,33 +158,19 @@
             <br>
           </div>
       </div>
-      <div class="row" id="ft2">
-        <div class="col-sm-8" >
-          Made by Jay Kingston
-        </div>
-        <div class="col-sm-4">
-          All right reserved Man Fashion Collection, FPT.HCM2020
-        </div>
-      </div>
+      <div  id="ft2" style="text-align :center"> All right reserved Man Fashion Collection, FPT.HCM2020 </div>
       </footer>
     </div>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
-       $(document).ready(function(){
+       $(document).ready(function(){ 
            
            $("#add").on("click",function(){
-               $("#loadContent").load("cart.html",function(response,status,xhr){
-                   if(status=="success")
-                   {
-                       alert("Add to cart successfully");
-                   }
-                   else if(status=="error")
-                   {
-                       lert("Data is requested fail with "+ xhr.status + " " +shr.status);
-                   }
-               })
-           })
-       });               
+              alert("Add to cart successfully");
+           });
+       });              
 
         function counterSession(){
             if(sessionStorage.counter)
