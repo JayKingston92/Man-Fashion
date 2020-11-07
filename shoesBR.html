@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .badge{
+            margin-top: -25px;
+            margin-left: -5px;
+        }
+    </style>
+</head>
+<body>
+        <!-- Comiled and minified jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <!-- Comiled and minified JS  -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+        <nav class="navbar navbar-default " >
+            <ul class="nav navbar-nav " >
+                <li style="font-size: 30px; margin-right: 50px; "><a href="FS.html"><B>Burberry</B></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 30px;">
+                <li><a href=""> <span class="glyphicon glyphicon-user"> Log-in</span></a> </li>
+                <li><a href="" > Cart <span class="glyphicon glyphicon-shopping-cart "><span class="badge" id="badge"></span></span></a></li>
+            </ul>
+        </nav>    
+        <div class="row" style="height: auto">
+            <div class="col-sm-6"> <img src="shoes2'.png" alt="" ></div>
+            <div class="col-sm-6" style="text-indent: 100px;" ><br><br><br>
+                <div><h3><B>Nylon, Suede and Vintage Check Sneakers</B></h3></div>
+                <div>$500.00</div>
+                    <hr style="width: 80%;">
+                <div> <m style="font-size: 20px; "> Color:</m> Archive beige</div>
+                <div> <m style="font-size: 20px;"> 270 x 70cm / 106.3 x 27.6in</m></div>
+                 
+                     <hr style="width: 80%;">
+                <div>Free Shipping and Returns </div>
+                   
+                    <a href=""></a>
+                <div><button style="margin-right: 10px;" class="btn btn-primary" data-toggle="collapse" data-target="#demo">More details</button><button class="btn btn-success" id="add" onclick="counterSession()">Add to cart</button></div>
+                <div style="text-indent: 220px;"><strong id="loadContent"></strong></div>
+                    <div id="demo" class="collapse">    <h2> DELIVERY DETAILS</h2>
+                        <div style="text-indent: 130px; font-size: 80%;">
+                        <h4>Free Standard Shipping</h4>
+                            <p> Place your order today and receive it within 3-5 working days</p><br>
+                        <h4> Next day delivery</h4>
+                            <p>Place your order today and receive it tomorrow</p> <br>
+                        <h4>Collect-in-Store</h4> 
+                            <p> Order online today and pick up your items in store as early as tomorrow</p><br>
+                        <h4> Free Gift Packaging</h4>
+                            <p>Our gift packaging includes a signature Burberry gift box finished with a hand-tied ribbon</p><br> 
+                        <h4> Free Returns</h4>
+                            <p>Enjoy free returns on your order</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+      
+        <hr>
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-8"> <h2>Fashion Store</h2>
+    
+                <div class="col-sm-6">
+                    <ul> 
+                        <li>590 CMT8, Phường 11, Quận 3, Tp.HCM</li>
+                        <li>Email:  GroupFashion@gmail.com</li>
+                        <li>Phone number: 0123456789</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <ul>
+                        <li>Shipping / Returns</li>
+                        <div></div>
+                    </ul>
+                </div>
+            </div> 
+            <div class="col-sm-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668498!2d106.66410831437034!3d10.786376992314777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIEPDoWNoIE3huqFuZyBUaMOhbmcgVMOhbSwgUGjGsOG7nW5nIDExLCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1603257679375!5m2!1svi!2s" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+        </div>
+    <script>
+        $(document).ready(function(){
+            $("#add").on("click",function(){
+                $("#loadContent").load("cart.html",function(response,status,xhr){
+                    if(status=="success")
+                    {
+                        alert("Add to cart successfully");
+                    }
+                    else if(status=="error")
+                    {
+                        lert("Data is requested fail with "+ xhr.status + " " +shr.status);
+                    }
+                })
+            })
+        });
+        function counterSession(){
+            if(sessionStorage.counter)
+            {
+                sessionStorage.counter= (Number)(sessionStorage.counter) +1 ;
+            }
+            else{
+                sessionStorage.counter =1;
+            }
+            document.getElementById("badge").innerHTML="" + sessionStorage.counter;
+        }; 
+     
+    </script>
+</body>
+</html>
