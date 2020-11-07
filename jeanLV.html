@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+    #badge{
+    position: fixed;
+    right: 22px;
+    top: 42px;
+     
+    }
+    #cart{
+      position: fixed;
+      right: 35px;
+      top: 49px;
+    }
+  </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,11 +51,12 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><span class="glyphicon glyphicon-user"></span>LOG-IN</a></li>
-              <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> CART</a></li>
+              <li><a href="cart.html" style="margin-right:50px; top:5px"> CART</a><span class="glyphicon glyphicon-shopping-cart" id="cart"></span><span class="badge" id="badge"></span> </li>
             </ul>
           </div>
         </div>
       </nav>
+
           <br><br><br><br><br>
          
     
