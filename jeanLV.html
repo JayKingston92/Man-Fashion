@@ -161,20 +161,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
-       $(document).ready(function(){
+       $(document).ready(function(){ 
            
            $("#add").on("click",function(){
-               $("#loadContent").load("cart.html",function(response,status,xhr){
-                   if(status=="success")
-                   {
-                       alert("Add to cart successfully");
-                   }
-                   else if(status=="error")
-                   {
-                       lert("Data is requested fail with "+ xhr.status + " " +shr.status);
-                   }
-               })
-           })
+              alert("Add to cart successfully");
+           });
        });              
 
         function counterSession(){
