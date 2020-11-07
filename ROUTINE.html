@@ -3,53 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Louis Vuitton  homepage</title>
     <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="prj.css">
+  <style>
+    #badge{
+    position: fixed;
+    right: 22px;
+    top: 42px;
+     
+    }
+    #cart{
+      position: fixed;
+      right: 35px;
+      top: 49px;
+    }
+  </style>
 </head>
 <body>
-      <!-- Comiled and minified jQuery -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-      <!-- Comiled and minified JS  -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Comiled and minified jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <!-- Comiled and minified JS  -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container-storage">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">HOME</a></li>
+                <li  data-target="#shoptoggle" data-toggle="collapse" id="shopnavbar">SHOPS
+                  <div >
+                        <ul id="shoptoggle" class="collapse">
+                          <li><a href="louisVuitton.html"> Louis Vuiton</a></li>
+                          <li><a href="burberry.html"> Burberry</a></li>
+                          <li><a href="PT2000.html">PT2000</a></li>
+                          <li><a href="YAME.html">YAME</a></li>
+                          <li><a href="ROUTINE.html">ROUTINE</a></li>
+                        </ul>
+                    </div>
+                </li>
+              <li><a href="2community.html">COMMUNITY</a></li>
+              <li><a href="3signature.html">SIGNATURE</a></li>
+              <li><a href="4aboutus.html">ABOUT US</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span>LOG-IN</a></li>
+              <li><a href="cart.html" style="margin-right:50px; top:5px"> CART</a><span class="glyphicon glyphicon-shopping-cart" id="cart"></span><span class="badge" id="badge"></span> </li>
+            </ul>
+          </div>
+      </nav>
+    </div>
+    
       <div class="container" >
-        <a href="FS.html"><img src="logoRoutine.png" alt="logoROUTINE" ></a>
+        <a href="FS.html"><img src="Image/product/logoRoutine.png" alt="logoROUTINE" style="margin-top:100px;"></a>
         <div class="row" style="height: 320px; ">
             <div class="col-sm-3 panel panel-success" style="height: 100%; text-align: center;">
                 <div class="panel-heading "> <a href="pantRoutine.html"> Kaki Pant</a></div>
-                <div class="panel-body"><a href="pantRoutine.html"><img src="quanRoutine.jpg" alt="pantROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
+                <div class="panel-body"><a href="pantRoutine.html"><img src="Image/product/quanRoutine.jpg" alt="pantROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
                 <div class="panel-footer">$250.00</div>
             </div>
             <div class="col-sm-3 panel panel-success" style="height: 100%; text-align: center;">
                 <div class="panel-heading "> <a href="sweaterRoutine.html">Sweater</a></div>
-                <div class="panel-body"><a href="sweaterRoutine.html"><img src="sweaterRoutine.jpg" alt="sweaterROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
+                <div class="panel-body"><a href="sweaterRoutine.html"><img src="Image/product/sweaterRoutine.jpg" alt="sweaterROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
                 <div class="panel-footer">$200.00</div>
             </div>
             <div class="col-sm-3 panel panel-success" style="height: 100%; text-align: center;">
                 <div class="panel-heading "> <a href="bowRoutine.html"> Bow</a></div>
-                <div class="panel-body"> <a href="bowRoutine.html"> <img src="bowRoutine.jpg" alt="bowROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
+                <div class="panel-body"> <a href="bowRoutine.html"> <img src="Image/product/bowRoutine.jpg" alt="bowROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
                 <div class="panel-footer">$50.00</div>
             </div>
           
             <div class="col-sm-3 panel panel-success" style="height: 100%; text-align: center;">
                 <div class="panel-heading ">  <a href="sneakerRoutine.html">Sneaker</a></div>
-                <div class="panel-body"><a href="sneakerRoutine.html"><img src="sneakerRoutine.jpg" alt="sneakerROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
+                <div class="panel-body"><a href="sneakerRoutine.html"><img src="Image/product/sneakerRoutine.jpg" alt="sneakerROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
                 <div class="panel-footer">$500.00</div>
             </div>
            
             <div class="col-sm-3 panel panel-success" style="height: 100%; text-align: center;">
                 <div class="panel-heading "> <a href="socksRoutine.html"> Socks</a></div>
-                <div class="panel-body"><a href="socksRoutine.html"><img src="socks.jpg" alt="sockROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
+                <div class="panel-body"><a href="socksRoutine.html"><img src="Image/product/socks.jpg" alt="sockROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
                 <div class="panel-footer">$15.00</div>
             </div>
             <div class="col-sm-3 panel panel-success" style="height: 100%; text-align: center;">
                 <div class="panel-heading "> <a href="ringROUTINE.html"> Rings</a></div>
-                <div class="panel-body"><a href="ringROUTINE.html"><img src="ringROUTINE.jpg" alt="ringROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
+                <div class="panel-body"><a href="ringROUTINE.html"><img src="Image/product/ringROUTINE.jpg" alt="ringROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
                 <div class="panel-footer">$150.00</div>
             </div>
             <div class="col-sm-3 panel panel-success" style="height: 100%; text-align: center;">
                 <div class="panel-heading "> <a href="superRoutine.html"> Superman Cape</a></div>
-                <div class="panel-body"><a href="superRoutine.html"><img src="superRoutine.jpg" alt="superROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
+                <div class="panel-body"><a href="superRoutine.html"><img src="Image/product/superRoutine.jpg" alt="superROUTINE"  onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a></div>
                 <div class="panel-footer">$500.00</div>
             </div>
         </div>
