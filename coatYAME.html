@@ -1,5 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+    #badge{
+    position: fixed;
+    right: 22px;
+    top: 42px;
+     
+    }
+    #cart{
+      position: fixed;
+      right: 35px;
+      top: 49px;
+    }
+  </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +22,7 @@
     <link rel="stylesheet" href="prj.css">
     <body>
       <div class="container-storage">
-      <nav class="navbar navbar-inverse">
+      <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -20,37 +34,52 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">HOME</a></li>
-              <li><a href="1shops.html">SHOPS</a></li>
+              <li><a href="index.html">HOME</a></li>
+                <li  data-target="#shoptoggle" data-toggle="collapse" id="shopnavbar">SHOPS
+                  <div >
+                        <ul id="shoptoggle" class="collapse">
+                          <li><a href="louisVuitton.html"> Louis Vuiton</a></li>
+                          <li><a href="burberry.html"> Burberry</a></li>
+                          <li><a href="PT2000.html">PT2000</a></li>
+                          <li><a href="YAME.html">YAME</a></li>
+                          <li><a href="ROUTINE.html">ROUTINE</a></li>
+                        </ul>
+                    </div>
+                </li>
               <li><a href="2community.html">COMMUNITY</a></li>
               <li><a href="3signature.html">SIGNATURE</a></li>
               <li><a href="4aboutus.html">ABOUT US</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><span class="glyphicon glyphicon-list"></span> MENU</a></li>
-              <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> CART</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span>LOG-IN</a></li>
+              <li><a href="cart.html" style="margin-right:50px; top:5px"> CART</a><span class="glyphicon glyphicon-shopping-cart" id="cart"></span><span class="badge" id="badge"></span> </li>
             </ul>
           </div>
         </div>
       </nav>
+
           <br><br><br><br><br>
-          <h1>&nbsp;YAME</h1>     
-        <div class="row" style="height: auto">
-            <div class="col-sm-6"> <img src="Image/product/khoacYAME_.jpg" alt="hatBR" ></div>
-            <div class="col-sm-6" style="text-indent: 100px;" ><br><br><br>
+         
+    
+        <div class="row" style="height:auto">
+                     <div class="col-sm-6"> <img src="Image/product/khoacYAME_.jpg" alt="coatYAME" ></div>
+            <div class="col-sm-6" style="text-indent: 100px;" ><br><br>
+                <div><h1 style="text-indent: 200px;">YAME</h1></div>
                 <div><h3><B>Jacket jean B52</B></h3></div>
                 <div>$250.00</div>
                     <hr style="width: 80%;">
-                <div> <m style="font-size: 20px; "> Color:</m>Brown</div>
-                <div> <m style="font-size: 20px;"> Size: </m> XL</div>
-                 
+                <div> <m style="font-size: 20px; "> Color: Brown</m></div>
+                <div> <m style="font-size: 20px;"> Size:  XL</m></div>
+
+                <div><m style="font-size: 20px;">Quantity: </m><input type="number" style="width:50px" min="0" max="99"></div>
+                     <br>
                      <hr style="width: 80%;">
                 <div>Free Shipping and Returns </div>
                    
-                    <a href=""></a>
+                    
                 <div><button style="margin-right: 10px;" class="btn btn-primary" data-toggle="collapse" data-target="#demo">More details</button><button class="btn btn-success" id="add" onclick="counterSession()">Add to cart</button></div>
-                <div style="text-indent: 220px;"><strong id="loadContent"></strong></div>
-                    <div id="demo" class="collapse">    <h2> DELIVERY DETAILS</h2>
+                      <div style="text-indent: 220px;"><strong id="loadContent"></strong></div>
+                      <div id="demo" class="collapse">    <h2> DELIVERY DETAILS</h2>
                         <div style="text-indent: 130px; font-size: 80%;">
                         <h4>Free Standard Shipping</h4>
                             <p> Place your order today and receive it within 3-5 working days</p><br>
@@ -66,96 +95,82 @@
                     </div>
             </div>
         </div>
-      
-        <hr>
-        <div class="container">
-            <div class="row">
-            <div class="col-sm-8"> <h2>Fashion Store</h2>
     
-                <div class="col-sm-6">
-                    <ul> 
-                        <li>590 CMT8, Phường 11, Quận 3, Tp.HCM</li>
-                        <li>Email:  GroupFashion@gmail.com</li>
-                        <li>Phone number: 0123456789</li>
-                    </ul>
-                </div>
-                <div class="col-sm-6">
-                    <ul>
-                        <li>Shipping / Returns</li>
-                        <div></div>
-                    </ul>
-                </div>
-            </div> 
-            <div class="col-sm-4">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668498!2d106.66410831437034!3d10.786376992314777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIEPDoWNoIE3huqFuZyBUaMOhbmcgVMOhbSwgUGjGsOG7nW5nIDExLCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1603257679375!5m2!1svi!2s" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <hr>
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-8"> <h2>Fashion Store</h2>
+
+            <div class="col-sm-6">
+                <ul> 
+                    <li>590 CMT8, Phường 11, Quận 3, Tp.HCM</li>
+                   <li >Mail <span class="glyphicon glyphicon-envelope" ></span>: <a href="mailto:lanhpt5@fe.edu.vn">lanhpt5@fe.edu.vn </span></a><br> </li>
+                    <li>Phone number <span class="glyphicon glyphicon-phone"></span>: <a href="phoneto:090900099"> 090900099</a></li>
+                </ul>
             </div>
+            <div class="col-sm-6">
+                <ul>
+                    <li>Shipping / Returns</li>
+                    <div></div>
+                </ul>
+            </div>
+        </div> 
+        <div class="col-sm-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668498!2d106.66410831437034!3d10.786376992314777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIEPDoWNoIE3huqFuZyBUaMOhbmcgVMOhbSwgUGjGsOG7nW5nIDExLCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1603257679375!5m2!1svi!2s" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
+    </div>
+    </div>
+    <footer>
+        <div class="row">
+          <br>
+          <div class="col-sm-4" id="ft1"><img src="Image/plane.png" alt="plane" class="im2"> &nbsp;&nbsp;&nbsp;Free Shipping Worldwide</div>
+          <div class="col-sm-4"id="ft1"><img src="Image/refresh.png" alt="refresh" class="im2"> &nbsp;&nbsp;&nbsp;Free Returns Worldwide</div>
+          <div class="col-sm-4" id="ft1"><img src="Image/cart.png" alt="cart" class="im2"> &nbsp;&nbsp;&nbsp;100% Safe & Secure
+          <br>
+            <img src="Image/dhl.png" alt="dhl" class="im2">  <img src="Image/paypal.png" alt="paypal" class="im2">  <img src="Image/ups.png" alt="ups" class="im2">
         </div>
-        <footer>
-            <div class="row">
-              <br>
-              <div class="col-sm-4" id="ft1"><img src="Image/plane.png" alt="plane" class="im2"> &nbsp;&nbsp;&nbsp;Free Shipping Worldwide</div>
-              <div class="col-sm-4"id="ft1"><img src="Image/refresh.png" alt="refresh" class="im2"> &nbsp;&nbsp;&nbsp;Free Returns Worldwide</div>
-              <div class="col-sm-4" id="ft1"><img src="Image/cart.png" alt="cart" class="im2"> &nbsp;&nbsp;&nbsp;100% Safe & Secure
-              <br>
-                <img src="Image/dhl.png" alt="dhl" class="im2">  <img src="Image/paypal.png" alt="paypal" class="im2">  <img src="Image/ups.png" alt="ups" class="im2">
-            </div>
+      </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-2">
+            <a href="1shops.html" id="pad1">Shop</a><br><br>
+            <a href="2community.html" id="pad1">Community</a><br><br>
+            <a href="3signature.html" id="pad1">Signature</a><br><br>
           </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-2">
-                <a href="1shops.html" id="pad1">Shop</a><br><br>
-                <a href="2community.html" id="pad1">Community</a><br><br>
-                <a href="3signature.html" id="pad1">Signature</a><br><br>
-              </div>
-              <div class="col-sm-2">
-                <a href="4aboutus.html" id="pad1">About Us</a><br><br>
-                <a href="5shipping.html" id="pad1">Shiping & Returns</a><br><br>
-                <a href="6guarantee.html" id="pad1">Guarantee</a><br><br>
-              </div>
-              <div class="col-sm-2">
-                <a href="7blog.html" id="pad1">Blog</a><br><br>
-                <a href="8contact.html" id="pad1">Contact</a><br><br>
-              </div>
-              <div class="col-sm-1"></div>
-              <div class="col-sm-5">
-                <div id="pad2">Be a part of our community  <a href="https://www.instagram.com/"><img src="Image/instagram.png" alt="insta" class="im1"></a>  <a href="https://www.facebook.com/"><img src="Image/facebook.png" alt="facebook"class="im1"></a>
-                  <a href="https://www.youtube.com/"><img src="Image/youtube.png" alt="youtube" class="im1"></a>  <a href="https://twitter.com/?lang=vi"><img src="Image/twitter.png" alt="twitter" class="im1"></a>  <a href="https://www.skype.com/en/"><img src="Image/skype.png" alt="skype" class="im1"></a></div> 
-                <br>
-                <div id="pad2">Join our newsletter</div>
-                <br>
-                <div id="pad2"><input type="email" placeholder="Enter your email" id="but1" >  <button id="but2">Join</button></div>
-                <br>
-              </div>
+          <div class="col-sm-2">
+            <a href="4aboutus.html" id="pad1">About Us</a><br><br>
+            <a href="5shipping.html" id="pad1">Shiping & Returns</a><br><br>
+            <a href="6guarantee.html" id="pad1">Guarantee</a><br><br>
           </div>
-          <div class="row" id="ft2">
-            <div class="col-sm-8" >
-              Made by Jay Kingston
-            </div>
-            <div class="col-sm-4">
-              All right reserved Man Fashion Collection, FPT.HCM2020
-            </div>
+          <div class="col-sm-2">
+            <a href="7blog.html" id="pad1">Blog</a><br><br>
+            <a href="8contact.html" id="pad1">Contact</a><br><br>
           </div>
-          </footer>
-        </div>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-5">
+            <div id="pad2">Be a part of our community  <a href="https://www.instagram.com/"><img src="Image/instagram.png" alt="insta" class="im1"></a>  <a href="https://www.facebook.com/"><img src="Image/facebook.png" alt="facebook"class="im1"></a>
+              <a href="https://www.youtube.com/"><img src="Image/youtube.png" alt="youtube" class="im1"></a>  <a href="https://twitter.com/?lang=vi"><img src="Image/twitter.png" alt="twitter" class="im1"></a>  <a href="https://www.skype.com/en/"><img src="Image/skype.png" alt="skype" class="im1"></a></div> 
+            <br>
+            <div id="pad2">Join our newsletter</div>
+            <br>
+            <div id="pad2"><input type="email" placeholder="Enter your email" id="but1" >  <button id="but2">Join</button></div>
+            <br>
+          </div>
+      </div>
+      <div  id="ft2" style="text-align :center"> All right reserved Man Fashion Collection, FPT.HCM2020 </div>
+      </footer>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $("#add").on("click",function(){
-                $("#loadContent").load("cart.html",function(response,status,xhr){
-                    if(status=="success")
-                    {
-                        alert("Add to cart successfully");
-                    }
-                    else if(status=="error")
-                    {
-                        lert("Data is requested fail with "+ xhr.status + " " +shr.status);
-                    }
-                })
-            })
-        });
+       $(document).ready(function(){ 
+           
+           $("#add").on("click",function(){
+              alert("Add to cart successfully");
+           });
+       });              
+
         function counterSession(){
             if(sessionStorage.counter)
             {
