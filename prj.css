@@ -98,4 +98,14 @@
        height:2cm;
        padding:1cm;
      }
+    #shopnavbar{
+       list-style-type: none;
+     }
+    div ul li a{
+            text-decoration: none;
+        }
+      div ul li a:hover{
+       
+        color:aqua;
+      }
      
